@@ -1,126 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Uma pequena surpresa ❤️</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma surpresa para você ❤️</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
-
 
 <body>
 
-
-<div class="estrelas"></div>
-
-
-
-<div id="capa">
-
-
-<div class="titulo-filme">
-
-
-<h1>
-❤️ Uma pequena surpresa ❤️
-</h1>
-
-
-<p>
-Um pequeno livro feito com carinho...
-</p>
-
-
-<button onclick="iniciarFilme()">
-Abrir livro ✨
-</button>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div id="historia">
-
-
-<div class="livro">
-
-
-
-<div class="pagina">
-
-
-<div class="numeroPagina">
-Capítulo
-</div>
-
-
-
-<h2 id="tituloPagina"></h2>
-
-
-
-<div class="fotoLivro">
-
-
-<img id="imagemPagina" src="" alt="">
-
-</div>
-
-
-
-
-<p id="textoPagina"></p>
-
-
-
-<div class="botoes">
-
-
-<button onclick="paginaAnterior()">
-⬅️ Voltar
-</button>
-
-
-
-<button onclick="proximaPagina()">
-Virar página ➡️
-</button>
-
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
+    <section class="entrada" id="entrada">
+        <div class="carta">
+            <h1>Tenho uma surpresa para você ❤️</h1>
+            <p>
+                Fiz isso com carinho, para guardar alguns momentos especiais.
+            </p>
+
+            <button onclick="abrirSurpresa()">
+                Abrir surpresa ✨
+            </button>
+        </div>
+    </section>
+
+
+    <main id="surpresa" class="escondido">
+
+        <h1>Alguns momentos especiais ❤️</h1>
+
+        <div class="galeria">
+            <img src="fotos/foto1.jpg">
+            <img src="fotos/foto2.jpg">
+            <img src="fotos/foto3.jpg">
+            <img src="fotos/foto4.jpg">
+            <img src="fotos/foto5.jpg">
+            <img src="fotos/foto6.jpg">
+            <img src="fotos/foto7.jpg">
+        </div>
+
+
+        <section class="final">
+            <h2>Obrigado por fazer parte da minha história ❤️</h2>
+            <p>
+                Cada momento fica mais especial quando é compartilhado com alguém importante.
+            </p>
+        </section>
+
+    </main>
 
 
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
