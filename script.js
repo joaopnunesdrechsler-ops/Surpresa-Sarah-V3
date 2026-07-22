@@ -8,5 +8,4 @@ function abrirSurpresa(){
     .classList
     .remove("escondido");
 
-
 }

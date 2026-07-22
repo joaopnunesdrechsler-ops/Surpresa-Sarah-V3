@@ -12,20 +12,22 @@ body{
 
     background:
     linear-gradient(
-    45deg,
-    #000000,
-    #3b003b,
-    #800040,
-    #000000
+        -45deg,
+        #000,
+        #4b001f,
+        #800040,
+        #1a001a
     );
 
     background-size:400% 400%;
 
-    animation:fundo 12s infinite alternate;
+    animation:fundo 12s ease infinite;
 
     color:white;
 
     text-align:center;
+
+    overflow-x:hidden;
 
 }
 
@@ -33,16 +35,17 @@ body{
 
 @keyframes fundo{
 
+    0%{
+        background-position:0% 50%;
+    }
 
-0%{
-background-position:0% 50%;
-}
+    50%{
+        background-position:100% 50%;
+    }
 
-
-100%{
-background-position:100% 50%;
-}
-
+    100%{
+        background-position:0% 50%;
+    }
 
 }
 
@@ -50,13 +53,13 @@ background-position:100% 50%;
 
 .entrada{
 
-height:100vh;
+    height:100vh;
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-justify-content:center;
+    justify-content:center;
 
 }
 
@@ -64,11 +67,11 @@ justify-content:center;
 
 .carta{
 
-max-width:450px;
+    max-width:450px;
 
-padding:40px;
+    padding:40px;
 
-animation:aparecer 2s;
+    animation:aparecer 2s;
 
 }
 
@@ -76,9 +79,9 @@ animation:aparecer 2s;
 
 .carta h1{
 
-font-size:38px;
+    font-size:38px;
 
-margin-bottom:20px;
+    margin-bottom:20px;
 
 }
 
@@ -86,9 +89,9 @@ margin-bottom:20px;
 
 .carta p{
 
-font-size:20px;
+    font-size:20px;
 
-margin-bottom:30px;
+    margin-bottom:30px;
 
 }
 
@@ -96,23 +99,17 @@ margin-bottom:30px;
 
 button{
 
+    padding:15px 35px;
 
-background:white;
+    border:none;
 
-color:#800040;
+    border-radius:50px;
 
-border:none;
+    font-size:18px;
 
-padding:15px 35px;
+    cursor:pointer;
 
-border-radius:50px;
-
-font-size:18px;
-
-cursor:pointer;
-
-transition:.3s;
-
+    transition:.3s;
 
 }
 
@@ -120,7 +117,7 @@ transition:.3s;
 
 button:hover{
 
-transform:scale(1.1);
+    transform:scale(1.1);
 
 }
 
@@ -128,7 +125,7 @@ transform:scale(1.1);
 
 .escondido{
 
-display:none;
+    display:none;
 
 }
 
@@ -136,7 +133,7 @@ display:none;
 
 .titulo{
 
-padding-top:40px;
+    padding-top:40px;
 
 }
 
@@ -144,15 +141,13 @@ padding-top:40px;
 
 .galeria{
 
+    display:grid;
 
-display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 
-gap:20px;
-
-padding:40px;
-
+    padding:40px;
 
 }
 
@@ -160,12 +155,11 @@ padding:40px;
 
 .galeria img{
 
+    width:100%;
 
-width:100%;
+    border-radius:20px;
 
-border-radius:20px;
-
-animation:foto 1.5s;
+    animation:foto 1.5s;
 
 }
 
@@ -173,11 +167,7 @@ animation:foto 1.5s;
 
 .final{
 
-
-padding:50px;
-
-font-size:18px;
-
+    padding:50px;
 
 }
 
@@ -185,24 +175,21 @@ font-size:18px;
 
 @keyframes aparecer{
 
+    from{
 
-from{
+        opacity:0;
 
-opacity:0;
+        transform:translateY(40px);
 
-transform:translateY(40px);
+    }
 
-}
+    to{
 
+        opacity:1;
 
-to{
+        transform:translateY(0);
 
-opacity:1;
-
-transform:translateY(0);
-
-}
-
+    }
 
 }
 
@@ -210,23 +197,20 @@ transform:translateY(0);
 
 @keyframes foto{
 
+    from{
 
-from{
+        opacity:0;
 
-opacity:0;
+        transform:scale(.8);
 
-transform:scale(.8);
+    }
 
-}
+    to{
 
+        opacity:1;
 
-to{
+        transform:scale(1);
 
-opacity:1;
-
-transform:scale(1);
-
-}
-
+    }
 
 }
